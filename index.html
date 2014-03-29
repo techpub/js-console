@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+
+A barebones JavaScript text console for canvas elements 
+by Steven Frank <stevenf@panic.com>
+
+This code is not optimized in any way.  Probably not suitable for real world use.
+
+-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Console</title>
+		<style>
+			body 
+			{
+				background-color: #888888;
+			}
+			
+			canvas 
+			{
+				background-color: #ffffff;
+			}
+		</style>
+		<script src="console.js"></script>
+		<script>
+			function init() 
+			{
+				var console = new Console(document.getElementById('canvas'));
+				var s = '';
+				
+				for ( var i = 0; i < 153; ++i )
+				{
+					s = s + "This is only a test. ";
+				}
+				
+				console.write(s);
+			}
+		</script>
+	</head>
+	<body onload="init()">
+		<canvas id="canvas" width="800" height="600"></canvas>
+	</body>
+</html>
